@@ -1,0 +1,296 @@
+ /* div {
+     color: white;
+     background-color: red;
+     font-size: 32px;
+     font-weight: bold;
+     text-align: center;
+ }*/
+ 
+ .odd {
+     background-color: pink;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+ 
+ #two {
+     color: blue;
+     font-size: 36px
+ }
+ 
+ #three {
+     font-size: 24px;
+ }
+ 
+ #four {
+     background-color: lightgreen;
+     font-size: 24px;
+     font-weight: bolder;
+ }
+ /* * {
+    padding: 4px;
+    border: 2px solid red;
+    margin: 8px;
+    height: auto;
+    width: 1000px;
+    box-sizing: border-box;
+} 
+ 
+ div {
+     color: black;
+     font-weight: bold;
+ }*/
+ 
+ #divone {
+     background-color: pink;
+     padding: 20px;
+     border: 2px solid blue;
+     margin: 32px;
+ }
+ 
+ #divtwo {
+     background-color: lightblue;
+     padding: 0px;
+     border: 2px solid purple;
+     margin-bottom: 48px;
+ }
+ 
+ #divthree {
+     background-color: lightcoral;
+     padding: 20px;
+     border: 2px solid brown;
+     margin: 60px;
+     width: 200px;
+ }
+ 
+ #box {
+     background-color: lightgray;
+     width: 400px;
+     height: 200px;
+     padding: 10px;
+ }
+ 
+ #b1 {
+     background-color: lightskyblue;
+     font-size: 16px;
+     padding: 8px;
+     border: 10px solid white;
+     margin-top: 10px;
+     margin-left: auto;
+     margin-right: auto;
+     margin-bottom: 0px;
+     width: 200px;
+ }
+ 
+ #b2 {
+     background-color: lightskyblue;
+     font-size: 12px;
+     padding: 8px;
+     border-left: 10px solid white;
+     border-right: 10px solid white;
+     border-bottom: 10px solid white;
+     margin-top: 0px;
+     margin-left: auto;
+     margin-right: auto;
+     margin-bottom: 0px;
+     width: 200px;
+ }
+ 
+ #b3 {
+     background-color: lightskyblue;
+     text-align: center;
+     font-size: 12px;
+     padding: 8px;
+     border-left: 10px solid white;
+     border-right: 10px solid white;
+     border-bottom: 10px solid white;
+     margin-top: 0px;
+     margin-left: auto;
+     margin-right: auto;
+     margin-bottom: 0px;
+     width: 200px;
+ }
+ 
+ button {
+     background-color: white;
+     font-size: 16px;
+ }
+ 
+ .flex-container {
+     display: flex;
+     flex-direction: row;
+ }
+ 
+ .flex-container div {
+     background: peachpuff;
+     border: 4px solid brown;
+     height: 100px;
+     flex: 1 1 auto;
+ }
+ 
+ .flex-container .two {
+     flex: 2 1 auto;
+ }
+ 
+ .container {
+     height: 140px;
+     padding: 16px;
+     background: plum;
+     border: 4px solid indigo;
+     display: flex;
+     align-items: center;
+     /*vertical*/
+     justify-content: center;
+     /*horizontal*/
+     gap: 20px;
+ }
+ 
+ .item {
+     width: 60px;
+     height: 60px;
+     border: 4px solid darkslategray;
+     background: skyblue;
+ }
+ 
+ .c1 {
+     display: flex;
+     background-color: blue;
+     border: 2px solid black;
+     height: 200px;
+     width: 200px;
+     align-items: center;
+     justify-content: center;
+ }
+ 
+ .b1 {
+     background-color: red;
+     border: 4px solid brown;
+     height: 50px;
+     width: 50px;
+ }
+ 
+ .header {
+     font-family: monospace;
+     background: papayawhip;
+ }
+ 
+ .logo {
+     font-size: 48px;
+     font-weight: 900;
+     color: tomato;
+     background: white;
+     padding: 4px 32px;
+ }
+ 
+ ul {
+     /* this removes the dots on the list items*/
+     list-style-type: none;
+ }
+ 
+ a {
+     font-size: 22px;
+     background: white;
+     padding: 8px;
+     /* this removes the line under the links */
+     text-decoration: none;
+ }
+ /* SOLUTION */
+ 
+ .header {
+     padding: 8px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+ }
+ 
+ ul {
+     display: flex;
+     margin: 0;
+     padding: 0;
+     gap: 8px;
+ }
+ 
+ .modal {
+     background: white;
+     width: 480px;
+     border-radius: 10px;
+     box-shadow: 2px 4px 16px rgba(0, 0, 0, .2);
+ }
+ 
+ .icon {
+     color: royalblue;
+     font-size: 26px;
+     font-weight: 700;
+     background: lavender;
+     width: 42px;
+     height: 42px;
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+ 
+ .close-button {
+     background: #eee;
+     border-radius: 50%;
+     color: #888;
+     font-weight: 400;
+     font-size: 16px;
+     height: 24px;
+     width: 24px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+ 
+ button {
+     padding: 8px 16px;
+     border-radius: 8px;
+ }
+ 
+ button.continue {
+     background: royalblue;
+     border: 1px solid royalblue;
+     color: white;
+ }
+ 
+ button.cancel {
+     background: white;
+     border: 1px solid #ddd;
+     color: royalblue;
+ }
+ /* SOLUTION: */
+ 
+ .modal {
+     display: flex;
+     gap: 16px;
+     padding: 16px;
+ }
+ 
+ .icon {
+     /* this keeps the icon from getting smashed by the text */
+     flex-shrink: 0;
+ }
+ 
+ .headermodal {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     font-size: 18px;
+     font-weight: 700;
+     margin-bottom: 8px;
+ }
+ 
+ .textmodal {
+     margin-bottom: 16px;
+ }
+ 
+ .modalcontainer {
+     font-family: Roboto, sans-serif;
+     margin: 0;
+     background: #aaa;
+     color: #333;
+     /* I'll give you this one for free */
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: row;
+ }
