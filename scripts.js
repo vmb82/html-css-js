@@ -1,6 +1,7 @@
 // your javascript file
 const container = document.querySelector('#container');
 
+/*
 const content = document.createElement('div');
 content.classList.add('nameX');
 content.textContent = 'This is the glorious text-content!';
@@ -24,27 +25,80 @@ p.textContent = "I'm in a div too"
 div.appendChild(h1)
 div.appendChild(p)
 container.appendChild(div)
+*/
 
-function alertFunction() {
-    console.log("Helo");
+const w = document.querySelector('#winner');
+
+const newh1 = document.createElement('h1')
+newh1.textContent = "Winner"
+w.appendChild(newh1)
+
+const newp = document.createElement('p')
+w.appendChild(newp)
+
+const newp1 = document.createElement('p')
+w.appendChild(newp1)
+
+const p = document.querySelector('#player');
+const ptext = document.createElement('p')
+p.appendChild(ptext)
+
+const c = document.querySelector('#computer');
+const ctext = document.createElement('p')
+c.appendChild(ctext)
+
+let pscore = 0;
+let cscore = 0;
+
+ctext.textContent = `Computer Score is ${cscore}`
+ptext.textContent = `Player Score is ${pscore}`
+
+
+function alertFunction(e) {
+
+
+    let humanChoice = e.target.textContent;
+
+    let computerChoice = computerPlay();
+
+
+    humanChoice = humanChoice.toUpperCase();
+
+    newp.textContent = `Player Choice is ${humanChoice} and Computer Choice is ${computerChoice}`
+
+    playRound(humanChoice, computerChoice)
+
+
+    ctext.textContent = `Computer Score is ${cscore}`
+    ptext.textContent = `Player Score is ${pscore}`
 }
+
+
 
 function modButton(e) {
     e.target.style.background = "red";
 }
 
-const btn1 = document.querySelector('#btn1')
-
-
-btn1.addEventListener('click', modButton);
 
 /*btn1.addEventListener('click', function(e) {
 
     e.target.style.background = 'blue';
 });*/
 
-btn1.addEventListener('click', alertFunction)
+/*
+const btn1 = document.querySelector('#btn1')
 
+
+btn1.addEventListener('click', modButton);
+
+
+btn1.addEventListener('click', alertFunction)
+*/
+
+const btns = document.querySelectorAll('button')
+btns.forEach(btn => {
+    btn.addEventListener('click', alertFunction)
+});
 
 
 function computerPlay() {
@@ -63,44 +117,46 @@ function computerPlay() {
 
 function playRound(humanChoice, computerChoice) {
     if (humanChoice == computerChoice) {
-        console.log("It is a draw, both chose " + humanChoice)
+        newp1.textContent = `It is a draw, both chose ${humanChoice}`
         return
     }
 
     if (humanChoice == "ROCK") {
         if (computerChoice == "PAPER") {
-            console.log("You lose! Paper beats Rock")
+            newp1.textContent = "You lose! Paper beats Rock"
+            cscore++
         } else {
-            console.log("You Win! Rock beats Scissors")
+            newp1.textContent = "You Win! Rock beats Scissors"
+            pscore++
         }
         return
     }
 
     if (humanChoice == "PAPER") {
         if (computerChoice == "SCISSORS") {
-            console.log("You lose! Scissors beats Paper")
+            newp1.textContent = "You lose! Scissors beats Paper"
+            cscore++
         } else {
-            console.log("You Win! Paper beats Rock")
+            newp1.textContent = "You Win! Paper beats Rock"
+            pscore++
         }
         return
     }
 
     if (humanChoice == "SCISSORS") {
         if (computerChoice == "ROCK") {
-            console.log("You lose! Rock beats Scissors")
+            newp1.textContent = "You lose! Rock beats Scissors"
+            cscore++
         } else {
-            console.log("You Win! Scissors beats Paper")
+            newp1.textContent = "You Win! Scissors beats Paper"
+            pscore++
         }
         return
     }
 }
 
-let computerChoice = computerPlay()
 
-console.log(computerChoice)
-
-let humanChoice = "default"
-
+/*
 do {
     humanChoice = prompt("Enter your choice for Rock Paper Scissors").toUpperCase()
 
@@ -108,9 +164,6 @@ do {
         alert("Invalid Choice")
     }
 } while (humanChoice != "ROCK" && humanChoice != "PAPER" && humanChoice != "SCISSORS")
-
-console.log(humanChoice)
+*/
 
 let cars = ["mazda", "bmw"]
-
-playRound(humanChoice, computerChoice)
